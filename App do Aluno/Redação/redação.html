@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino de Redação</title>
+    <link rel="stylesheet" href="redação.css">
+</head>
+<body>
+    <h1>Treino de Redação</h1>
+    <button id="btnSortear" onclick="sortearTema()">Sortear Tema</button>
+    <p id="tema">Tema: Clique para sortear</p>
+    <div class="timer" id="timer">01:30</div>
+    <textarea id="redacao" maxlength="3000" oninput="contarLinhas()"></textarea>
+    <p id="contador">Linhas: 0/30</p>
+    <p id="erro" class="error"></p>
+    <button onclick="corrigirRedacao()">Corrigir</button>
+    <button onclick="verNota()">Ver Nota</button>
+    <p id="correcao"></p>
+    <p id="nota" style="display: none;"></p>
+    
+    <div id="suggestions" class="suggestions" style="display: none;">
+        <h3>Sugestões de Melhoria</h3>
+        <ul id="suggestionList"></ul>
+    </div>
+
+    <script src="redação.js"></script>
+</body>
+</html>

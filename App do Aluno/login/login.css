@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+nav {
+    position: fixed;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    width: 100%;
+    display: flex; /* Torna o display flexível */
+    align-items: center;
+    padding: 10px 20px; /* Aumentei o padding horizontal para 20px */
+    background-color: #fdfdfd;
+    font-family: 'Poppins', sans-serif; /* Fonte importada do Google */
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+.logo {
+    height: 50px; /* Ajuste conforme necessário */
+    margin-right: 20px;
+}
+
+nav span {
+    margin-left: 20px;
+    color: #0288D1;
+}
+
+nav a {
+    margin-left: auto; /* Empurra o link "Cadastro" para a direita */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    padding: 10px; /* Adiciona um espaçamento interno */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #0288D1; /* Cor do link */
+    font-weight: bold; /* Texto em negrito */
+}
+
+nav a:hover {
+    color: #F4511E; /* Cor do link ao passar o mouse */
+}
+
+.container {
+    font-family: 'Poppins', sans-serif; /* Fonte importada do Google */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px); /* Ajusta para a altura da navbar */
+    padding-top: 70px; /* Evita sobreposição com a navbar */
+}
+
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 450px;
+    height: 400px;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estilizando os inputs */
+input {
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    display: block;
+    width: 96%;
+    margin: 30px 0;
+    padding: 10px;
+    border: 1px solid #ccc; /* Adiciona uma borda aos inputs */
+    border-radius: 5px;
+}
+
+button {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease; /* Transição suave para o fundo */
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    display: block;
+    width: 100%;
+    margin: 100px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000); /* Gradiente no hover */
+    background-size: 300% 300%; /* Aumenta o tamanho do gradiente para permitir animação */
+    animation: moveGradient 5s linear infinite; /* Animação do gradiente no hover */
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%; /* Posição inicial do gradiente */
+    }
+    50% {
+        background-position: 100% 50%; /* Movimento do gradiente */
+    }
+    100% {
+        background-position: 0% 50%; /* Retorna à posição inicial */
+    }
+}
+
+a button{
+     background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease; /* Transição suave para o fundo */
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    display: block;
+    width: 100%;
+    margin: 100px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+a button :hover{
+  background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000); /* Gradiente no hover */
+    background-size: 300% 300%; /* Aumenta o tamanho do gradiente para permitir animação */
+    animation: moveGradient 5s linear infinite; /* Animação do gradiente no hover */
+}

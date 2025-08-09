@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Resumos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='ia.css'>
+    <script src='ia.js' defer></script>
+    <link rel="icon" href="../imagens/logo.jpg.jpg">
+</head>
+<body>
+    <div class="resumo-container">
+        <h2>Ferramenta de Resumos</h2>
+        
+        <div class="resumo-input">
+            <textarea id="textoOriginal" placeholder="Cole seu texto aqui..."></textarea>
+            <div class="contador-caracteres">0 caracteres</div>
+        </div>
+        
+        <div class="resumo-controls">
+            <select id="nivelResumo">
+                <option value="curto">Resumo Curto (30%)</option>
+                <option value="medio" selected>Resumo Médio (50%)</option>
+                <option value="detalhado">Resumo Detalhado (70%)</option>
+            </select>
+            
+            <button id="gerarResumo" class="btn-primary">Gerar Resumo</button>
+            <button id="limparTexto" class="btn-secondary">Limpar</button>
+        </div>
+        
+        <div class="resumo-output">
+            <h3>Resumo Gerado:</h3>
+            <div id="textoResumido" class="output-box"></div>
+            <button id="copiarResumo" class="btn-secondary">Copiar Resumo</button>
+        </div>
+        
+        <div class="historico-resumos">
+            <h3>Histórico de Resumos</h3>
+            <ul id="listaHistorico"></ul>
+        </div>
+    </div>
+</body>
+</html>
