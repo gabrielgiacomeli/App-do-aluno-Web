@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer Pomodoro</title>
+    <link rel="stylesheet" href="pomodoro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../imagens/logo.jpg.jpg">
+    <script src='pomodoro.js' defer></script>
+</head>
+<body>
+    <nav>  
+        <a href="../Index/index.html"><img src="../imagens/logo.jpg.jpg" alt="logo" class="logo"></a>
+        <span>App do aluno</span>
+        <a href="../login/login.php"><img src="../imagens/logout.png" class="logout"></a>
+        
+    </nav>
+    
+    <div class="main-content">
+        <div class="container">
+            <h1>Método Pomodoro</h1>
+            
+            <div class="timer-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            
+            <div class="controls">
+                <button id="startPauseBtn">Iniciar</button>
+                <button id="resetBtn">Resetar</button>
+            </div>
+            
+            <div class="settings">
+                <div class="setting">
+                    <label for="workTime">Tempo de Trabalho (min):</label>
+                    <input type="number" id="workTime" min="1" max="60" value="25">
+                </div>
+                <div class="setting">
+                    <label for="breakTime">Tempo de Descanso (min):</label>
+                    <input type="number" id="breakTime" min="1" max="30" value="5">
+                </div>
+            </div>
+            
+            <div class="counter">
+                <p>Pomodoros completos: <span id="pomodoroCount">0</span></p>
+                <p>Status: <span id="status">Pronto para começar</span></p>
+            </div>
+        </div>
+    </div>
+
+    <audio id="alarmSound" src="https://assets.mixkit.co/sfx/preview/mixkit-alarm-digital-clock-beep-989.mp3"></audio>
+</body>
+</html>

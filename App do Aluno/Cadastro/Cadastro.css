@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: fixed;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fdfdfd;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+nav span {
+    margin-left: 20px;
+    color: #0288D1;
+}
+
+nav a {
+    margin-left: auto;
+    white-space: nowrap;
+    padding: 10px;
+    text-decoration: none;
+    color: #0288D1;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #F4511E;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+    padding-top: 70px;
+    overflow-y: auto;
+}
+
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.etapa {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, select, textarea {
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 96%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    background-size: 300% 300%;
+    animation: moveGradient 5s linear infinite;
+}
+
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
