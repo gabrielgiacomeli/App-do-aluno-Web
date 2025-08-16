@@ -1,50 +1,68 @@
+:root {
+    --notion-blue: #0288D1;
+    --notion-blue-light: #e8f0fe;
+    --notion-orange: #F4511E;
+}
+
 body {
     margin: 0;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* NAVBAR ATUALIZADA */
 nav {
     position: fixed;
-    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex; /* Torna o display flexível */
+    height: 56px;
+    display: flex;
     align-items: center;
-    padding: 10px 20px; /* Aumentei o padding horizontal para 20px */
-    background-color: #fdfdfd;
-    font-family: 'Poppins', sans-serif; /* Fonte importada do Google */
-    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
 }
 
 .logo {
-    height: 50px; /* Ajuste conforme necessário */
-    margin-right: 20px;
+    height: 40px;
+    margin-right: 12px;
 }
 
 nav span {
-    margin-left: 20px;
-    color: #0288D1;
+    font-size: 18px;
+    color: var(--notion-blue);
+    font-weight: 600;
+    margin-left: 8px;
 }
 
 nav a {
-    margin-left: auto; /* Empurra o link "Cadastro" para a direita */
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
-    padding: 10px; /* Adiciona um espaçamento interno */
-    text-decoration: none; /* Remove o sublinhado do link */
-    color: #0288D1; /* Cor do link */
-    font-weight: bold; /* Texto em negrito */
+    margin-left: auto;
+    padding: 8px 12px;
+    font-size: 15px;
+    color: var(--notion-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 6px;
 }
 
 nav a:hover {
-    color: #F4511E; /* Cor do link ao passar o mouse */
+    color: var(--notion-orange);
+    background-color: var(--notion-blue-light);
 }
 
+/* CONTAINER CENTRAL */
 .container {
-    font-family: 'Poppins', sans-serif; /* Fonte importada do Google */
+    font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 70px); /* Ajusta para a altura da navbar */
-    padding-top: 70px; /* Evita sobreposição com a navbar */
+    height: calc(100vh - 56px); /* Altura da navbar */
+    padding-top: 56px;
 }
 
 form {
@@ -55,29 +73,30 @@ form {
     text-align: center;
     width: 450px;
     height: 400px;
-    flex-direction: column; /* Organiza os elementos em coluna */
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Estilizando os inputs */
+/* INPUTS */
 input {
-    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
     display: block;
     width: 96%;
     margin: 30px 0;
     padding: 10px;
-    border: 1px solid #ccc; /* Adiciona uma borda aos inputs */
+    border: 1px solid #ccc;
     border-radius: 5px;
 }
 
+/* BOTÃO PRINCIPAL */
 button {
     background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.5s ease; /* Transição suave para o fundo */
-    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    transition: background 0.5s ease;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
     display: block;
     width: 100%;
     margin: 100px 0;
@@ -86,31 +105,21 @@ button {
     border-radius: 5px;
 }
 
+/* HOVER COM GRADIENTE ANIMADO */
 button:hover {
-    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000); /* Gradiente no hover */
-    background-size: 300% 300%; /* Aumenta o tamanho do gradiente para permitir animação */
-    animation: moveGradient 5s linear infinite; /* Animação do gradiente no hover */
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    background-size: 300% 300%;
+    animation: moveGradient 5s linear infinite;
 }
 
-@keyframes moveGradient {
-    0% {
-        background-position: 0% 50%; /* Posição inicial do gradiente */
-    }
-    50% {
-        background-position: 100% 50%; /* Movimento do gradiente */
-    }
-    100% {
-        background-position: 0% 50%; /* Retorna à posição inicial */
-    }
-}
-
-a button{
-     background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+/* GRADIENTE PARA <a><button> */
+a button {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
     color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.5s ease; /* Transição suave para o fundo */
-    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2); /* Cria uma sombra leve na parte inferior */
+    transition: background 0.5s ease;
+    box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
     display: block;
     width: 100%;
     margin: 100px 0;
@@ -119,8 +128,21 @@ a button{
     border-radius: 5px;
 }
 
-a button :hover{
-  background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000); /* Gradiente no hover */
-    background-size: 300% 300%; /* Aumenta o tamanho do gradiente para permitir animação */
-    animation: moveGradient 5s linear infinite; /* Animação do gradiente no hover */
+a button:hover {
+    background: linear-gradient(135deg, #0D2B45, #0288D1, #F4511E, #FFA000);
+    background-size: 300% 300%;
+    animation: moveGradient 5s linear infinite;
+}
+
+/* ANIMAÇÃO DO GRADIENTE */
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

@@ -5,9 +5,9 @@
     --notion-dark-gray: #e0e0e0;
     --notion-text: #37352f;
     --notion-text-light: #5a5a5a;
-    --notion-blue: #2f5bff;
+    --notion-blue: #0288D1;
     --notion-blue-light: #e8f0fe;
-    --notion-orange: #ff6b00;
+    --notion-orange: #F4511E;
     --notion-border: #e6e6e6;
     --notion-card-shadow: 0 2px 8px rgba(15, 15, 15, 0.1);
 }
@@ -24,42 +24,52 @@ body {
     background-color: var(--notion-gray);
     color: var(--notion-text);
     line-height: 1.6;
+    margin: 0;
+    height: 100vh;
 }
 
-/* Navbar (mantida como solicitado) */
+/* NAVBAR COMPACTA E REFINADA */
 nav {
-    background-color: white;
-    border-bottom: 1px solid var(--notion-border);
-    padding: 12px 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
     display: flex;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    z-index: 1000;
 }
 
 .logo {
-    height: 32px;
-    margin-right: 16px;
+    height: 40px;
+    margin-right: 12px;
 }
 
 nav span {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--notion-text);
+    font-size: 18px;
+    color: var(--notion-blue);
+    font-weight: 600;
+    margin-left: 8px;
 }
 
 nav a {
     margin-left: auto;
+    padding: 8px 12px;
+    font-size: 15px;
     color: var(--notion-blue);
     text-decoration: none;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s ease;
+    font-weight: 600;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 6px;
 }
 
 nav a:hover {
+    color: var(--notion-orange);
     background-color: var(--notion-blue-light);
 }
 
@@ -68,9 +78,10 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 24px;
+    padding-top: 80px;
 }
 
-/* Hero Section - Estilo Notion */
+/* Hero Section */
 .hero-section {
     text-align: center;
     padding: 80px 0;
@@ -131,7 +142,7 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* Cards no estilo Notion */
+/* Cards Notion */
 .resource-item {
     background: white;
     border: 1px solid var(--notion-border);
@@ -147,7 +158,7 @@ nav a:hover {
     box-shadow: 0 6px 12px rgba(15, 15, 15, 0.1);
 }
 
-/* Botão no estilo Notion */
+/* Botão estilo Notion */
 .notion-button {
     background-color: var(--notion-black);
     color: white;
@@ -167,7 +178,7 @@ nav a:hover {
     background-color: #333;
 }
 
-/* Seção de Recursos */
+/* Recursos */
 .resources-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -203,20 +214,20 @@ nav a:hover {
     .hero-title {
         font-size: 36px;
     }
-    
+
     .hero-subtitle {
         font-size: 18px;
     }
-    
+
     .highlight-text {
         font-size: 32px;
     }
-    
+
     .partners-grid {
         gap: 40px;
         padding: 30px;
     }
-    
+
     .partner-logo {
         height: 60px;
         max-width: 140px;
@@ -227,17 +238,17 @@ nav a:hover {
     .hero-title {
         font-size: 28px;
     }
-    
+
     .partners-grid {
         gap: 30px;
         padding: 20px;
     }
-    
+
     .partner-logo {
         height: 50px;
         max-width: 120px;
     }
-    
+
     .resources-section {
         grid-template-columns: 1fr;
     }
