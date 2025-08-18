@@ -4,26 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Treino de Redação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="redação.css">
 </head>
 <body>
-    <h1>Treino de Redação</h1>
-    <button id="btnSortear" onclick="sortearTema()">Sortear Tema</button>
-    <p id="tema">Tema: Clique para sortear</p>
-    <div class="timer" id="timer">01:30</div>
-    <textarea id="redacao" maxlength="3000" oninput="contarLinhas()"></textarea>
-    <p id="contador">Linhas: 0/30</p>
-    <p id="erro" class="error"></p>
-    <button onclick="corrigirRedacao()">Corrigir</button>
-    <button onclick="verNota()">Ver Nota</button>
-    <p id="correcao"></p>
-    <p id="nota" style="display: none;"></p>
-    
-    <div id="suggestions" class="suggestions" style="display: none;">
-        <h3>Sugestões de Melhoria</h3>
-        <ul id="suggestionList"></ul>
-    </div>
+    <nav>  
+        <img src="../imagens/logo.jpg.jpg" alt="logo" class="logo">
+        <span>App do aluno</span>
+        
+    </nav>
 
+    <main class="container">
+        <header>
+            <h1>Treino de Redação</h1>
+            <p id="tema">Clique no botão abaixo para começar</p>
+            <button id="btnSortear" class="btn btn-secondary" onclick="sortearTema()">Sortear Novo Tema</button>
+             <button id="btnPausar" class="btn btn-secondary" onclick="pausarRetomarTimer()" style="display: none;">Pausar Timer</button>
+        </header>
+
+        <section class="editor-section">
+            <div class="timer" id="timer">01:30:00</div>
+           <textarea id="redacao" maxlength="3000" placeholder="Comece a escrever sua redação aqui..."></textarea>
+           <p id="contador"> Minimo de Caracteres: 0/1600</p>
+        </section>
+
+<section class="actions">
+            <p id="erro" class="error"></p>
+            <button class="btn btn-primary" onclick="corrigirRedacao()">Corrigir Redação</button>
+            
+           
+            
+            <button class="btn btn-secondary" onclick="verNota()">Ver Nota</button>
+        </section>
+
+        <section id="feedback-area" class="feedback">
+            <div id="correcao"></div>
+            <div id="nota" style="display: none;"></div>
+            <div id="suggestions" class="suggestions" style="display: none;">
+                <h3>Sugestões de Melhoria</h3>
+                <ul id="suggestionList"></ul>
+            </div>
+        </section>
+    </main>
+    
     <script src="redação.js"></script>
 </body>
 </html>
